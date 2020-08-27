@@ -1,0 +1,32 @@
+/* Footer section */
+.footer {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.address {
+  font-size: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.phone-number {
+  color: black;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.phone-number > * {
+  margin: 10px;
+}
+
+.social-icons {
+  margin: 10px;
+  color: black;
+}
