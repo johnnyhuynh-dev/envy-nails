@@ -5,8 +5,8 @@ import NavBar from "./NavBar";
 function App() {
   return (
     <div>
-      {/* <Footer /> */}
       <NavBar />
+      {/* <Footer /> */}
     </div>
   );
 }

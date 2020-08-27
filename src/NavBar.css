@@ -1,3 +1,55 @@
+/* The Whole Navigation Bar */
+
+/* The Hamburger icon */
+.nav-icon {
+  z-index: 99;
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav-icon > * {
+  margin: 2px;
+  height: 4px;
+  background-color: white;
+}
+
+.first-stripe,
+.second-stripe {
+  width: 30px;
+}
+
+.third-stripe {
+  width: 22px;
+}
+
+/* Nav Items */
 .nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  min-height: 60vh;
+  margin: 10px 0px;
   font-size: 1.5rem;
+  padding: 20px;
+  padding-top: 40px;
+  z-index: -1;
+  transform: translateX(-2000px);
+  transition: all 500ms;
+}
+
+.nav-items.active {
+  transform: translateX(0px);
+  transition: all 500ms;
+}
+
+.nav-items > * {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
