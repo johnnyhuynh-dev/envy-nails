@@ -1,0 +1,10 @@
+.outer-bar {
+  height: 5px;
+  background-color: red;
+  width: 100%;
+}
+
+.inner-bar {
+  height: 5px;
+  background-color: black;
+}
