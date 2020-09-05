@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ProgressBar.css";
 
-export default function ProgressBar({ slidingTime }) {
+export default function ProgressBar({ showTime, setProgressLoading }) {
   const [startWidth, setStartWidth] = useState(0);
   const outerRef = useRef();
   //   Interval to increase the width of the inner bar and cleaning up whenever it reaches the width of the outer bar
@@ -14,10 +14,11 @@ export default function ProgressBar({ slidingTime }) {
     const finalWidth = +outerWidthString.replace("px", "");
 
     // the smaller amount the inner bar moves in each render, the smoother the transition
-    const pixelAmountPerFiveMs = finalWidth / (slidingTime * 200);
+    const pixelAmountPerFiveMs = finalWidth / (showTime * 200);
 
     // stop loading the inner bar when it reaches the end
     if (startWidth >= finalWidth) {
+      setProgressLoading(false);
       return;
     }
 

@@ -1,0 +1,31 @@
+.demo-photo {
+  width: 90%;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.service-info {
+  display: flex;
+}
+
+.service-name,
+.price {
+  border: none;
+  margin: 5px 3px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-weight: 600;
+}
+
+.price {
+  min-width: auto;
+}
+
+.demo-photo img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}

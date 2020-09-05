@@ -1,5 +1,9 @@
+/* .progress-bar {
+  position: absolute;
+} */
+
 .outer-bar {
-  height: 5px;
+  height: 3px;
   width: 100%;
   border: none;
 }

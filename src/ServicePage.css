@@ -1,0 +1,29 @@
+/* these classes also applies for other components: Nails and Waxing */
+.separator-image {
+  margin-top: 5px;
+  height: 200px;
+  width: 100%;
+}
+
+.separator-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.service-title {
+  margin-left: 15px;
+  padding: 5px 10px;
+  background-color: #48b78d;
+  color: #1d1d35;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}

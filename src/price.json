@@ -1,0 +1,151 @@
+{
+  "nails": [
+    {
+      "service": "Buff, Shape & Polish",
+      "price": {
+        "Polish": 15,
+        "Shellac": 20
+      }
+    },
+    {
+      "service": "Manicure",
+      "price": {
+        "Polish": 25,
+        "Shellac": 30
+      }
+    },
+    {
+      "service": "Pedicure",
+      "price": {
+        "Polish": 30,
+        "Shellac": 35
+      }
+    },
+    {
+      "service": "Deluxe Pedicure",
+      "price": {
+        "Polish": 45,
+        "Shellac": 50
+      }
+    },
+    {
+      "service": "Full-set Acrylic",
+      "price": {
+        "Polish": 40,
+        "Shellac": 45
+      }
+    },
+    {
+      "service": "Re-fill Acrylic",
+      "price": {
+        "Polish": 35,
+        "Shellac": 50
+      }
+    },
+    {
+      "service": "Full-set SNS with Tips",
+      "price": {
+        "Polish": 45
+      }
+    },
+    {
+      "service": "Full-set SNS White Tips",
+      "price": {
+        "Polish": 50
+      }
+    },
+    {
+      "service": "Full-set SNS Ombre Nails",
+      "price": {
+        "Polish": 60
+      }
+    },
+
+    {
+      "service": "Soak off Acrylic / SNS",
+      "price": {
+        "Polish": 20
+      }
+    },
+    {
+      "service": "Soak off Shellac / Gel",
+      "price": {
+        "Polish": 10
+      }
+    }
+  ],
+
+  "eyelash": [
+    {
+      "service": "Classic",
+      "price": {
+        "Full-set": 70,
+        "Re-fill": [45, 60]
+      }
+    },
+
+    {
+      "service": "Hybrid",
+      "price": {
+        "Full-set": 85,
+        "Re-fill": [55, 70]
+      }
+    },
+
+    {
+      "service": "Natural Volume",
+      "price": {
+        "Full-set": 95,
+        "Re-fill": [65, 75]
+      }
+    },
+    {
+      "service": "Glamour Volume",
+      "price": {
+        "Full-set": 110,
+        "Re-fill": [70, 90]
+      }
+    },
+    {
+      "service": "Mega Volume",
+      "price": {
+        "Full-set": 130,
+        "Re-fill": [85, 110]
+      }
+    },
+    {
+      "service": "Bottom Lashes",
+      "price": {
+        "Full-set": 20
+      }
+    },
+
+    {
+      "service": "Eyelash Removal",
+      "price": {
+        "Full-set": 20
+      }
+    }
+  ],
+  "waxing": [
+    { "service": "Eyebrows", "price": 15 },
+    { "service": "Upper Lip", "price": 10 },
+    { "service": "Chin", "price": 15 },
+    { "service": "Eyebrows + Upper Lip + Chin", "price": 35 },
+    { "service": "Sides Face", "price": 20 },
+    { "service": "Full Face", "price": 50 },
+    { "service": "Underarms", "price": 15 },
+    { "service": "1/2 Arms/ Full Arms", "price": [20, 30] },
+    { "service": "1/2 Legs/ Full Legs", "price": [25, 40] },
+    { "service": "Bikini", "price": 25 },
+    { "service": "G-String", "price": 40 },
+    { "service": "Brazilian", "price": 50 }
+  ],
+
+  "lifting": [
+    { "service": "Eyelash Lifting", "price": 40 },
+    { "service": "Eyelash Lift + Tint", "price": 55 },
+    { "service": "Eyebrows Tinting", "price": 15 },
+    { "service": "Eyebrows Wax + Tint", "price": 40 }
+  ]
+}

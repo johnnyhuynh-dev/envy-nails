@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import useStorage from "./useStorage";
+import React from "react";
 import useMultipleStorage from "./useStorage";
+import "./Output.css";
 
 export default function Output({ files, folder, setFiles, setFolder }) {
   const urls = useMultipleStorage(files, folder);
