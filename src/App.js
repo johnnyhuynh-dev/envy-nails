@@ -17,7 +17,7 @@ function App() {
     <div>
       <NavBar />
       <TopLogo />
-      <Pricing />
+      {/* <Pricing /> */}
       {/* <EyelashExtension /> */}
       {/* <UploadForm /> */}
       {/* <div className="slider-container">

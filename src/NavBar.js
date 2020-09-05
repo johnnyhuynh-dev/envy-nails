@@ -115,6 +115,9 @@ export default function NavBar() {
               exit="exit"
             >
               <motion.div variants={navItemVariant} whileHover="hover">
+                Home
+              </motion.div>
+              <motion.div variants={navItemVariant} whileHover="hover">
                 Nails
               </motion.div>
               <motion.div variants={navItemVariant} whileHover="hover">
@@ -124,7 +127,7 @@ export default function NavBar() {
                 Waxing
               </motion.div>
               <motion.div variants={navItemVariant} whileHover="hover">
-                About
+                Pricing
               </motion.div>
               <motion.div variants={navItemVariant} whileHover="hover">
                 Contact

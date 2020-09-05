@@ -18,6 +18,7 @@ export default function Pricing() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ damping: 10, duration: 1 }}
     >
+      <h2 className="service-title">PRICING</h2>
       <table className="nails-pricing">
         <div className="embedded-logo">
           <img src={smallLogo} width={250} height={250} alt="small logo" />
@@ -44,6 +45,7 @@ export default function Pricing() {
             </tr>
           ))}
         </tbody>
+        <small>* Designer/ Art on Nails price may vary from $5 </small>
       </table>
 
       <table className="eyelash-pricing">

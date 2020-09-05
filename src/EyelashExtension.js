@@ -9,7 +9,7 @@ export default function EyelashExtension() {
       <ServicePage
         images={images}
         loading={loading}
-        serviceName={"Eyelash Extension"}
+        serviceName={"EYELASH EXTENSION"}
       />
     </div>
   );
