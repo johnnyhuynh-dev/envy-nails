@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import ProgressBar from "./ProgressBar";
 import UploadForm from "./firebase/UploadForm";
 import Slider from "./Slider";
 import Loader from "./Loader";
@@ -17,7 +16,7 @@ function App() {
     <div>
       <NavBar />
       <TopLogo />
-      {/* <Pricing /> */}
+      <Pricing />
       {/* <EyelashExtension /> */}
       {/* <UploadForm /> */}
       {/* <div className="slider-container">

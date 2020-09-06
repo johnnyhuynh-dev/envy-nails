@@ -19,108 +19,116 @@ export default function Pricing() {
       transition={{ damping: 10, duration: 1 }}
     >
       <h2 className="service-title">PRICING</h2>
-      <table className="nails-pricing">
+      <div className="service-container">
         <div className="embedded-logo">
           <img src={smallLogo} width={250} height={250} alt="small logo" />
         </div>
-        <thead>
-          <tr>
-            <th>
-              <div className="service-heading">NAILS</div>
-            </th>
-            <th className="first-sub-service-heading">Polish</th>
-            <th className="second-sub-service-heading">Shellac</th>
-          </tr>
-        </thead>
-        <tbody>
-          {nailsPrices.map((nailService) => (
-            <tr key={nailService.service}>
-              <td>{nailService.service}</td>
-              <td>${nailService.price.Polish}</td>
-              <td>
-                {nailService.price.Shellac
-                  ? `$${nailService.price.Shellac}`
-                  : ""}
-              </td>
+        <table className="nails-pricing">
+          <thead>
+            <tr>
+              <th>
+                <div className="service-heading">NAILS</div>
+              </th>
+              <th className="first-sub-service-heading">Polish</th>
+              <th className="second-sub-service-heading">Shellac</th>
             </tr>
-          ))}
-        </tbody>
+          </thead>
+          <tbody>
+            {nailsPrices.map((nailService) => (
+              <tr key={nailService.service}>
+                <td>{nailService.service}</td>
+                <td>${nailService.price.Polish}</td>
+                <td>
+                  {nailService.price.Shellac
+                    ? `$${nailService.price.Shellac}`
+                    : ""}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <small>* Designer/ Art on Nails price may vary from $5 </small>
-      </table>
+      </div>
 
-      <table className="eyelash-pricing">
+      <div className="service-container">
         <div className="embedded-logo">
           <img src={smallLogo} width={220} height={220} alt="small logo" />
         </div>
-        <thead>
-          <tr>
-            <th>
-              <div className="service-heading">EYELASH EXTENSION</div>
-            </th>
-            <th className="first-sub-service-heading">Full-set</th>
-            <th className="second-sub-service-heading">Re-fill</th>
-          </tr>
-        </thead>
-        <tbody>
-          {eyelashPrices.map((eyelashService) => (
-            <tr key={eyelashService.service}>
-              <td>{eyelashService.service}</td>
-              <td>${eyelashService.price.Fullset}</td>
-              <td>
-                {eyelashService.price.Refill
-                  ? `$${eyelashService.price.Refill[0]} - $${eyelashService.price.Refill[1]}`
-                  : ""}
-              </td>
+        <table className="eyelash-pricing">
+          <thead>
+            <tr>
+              <th>
+                <div className="service-heading">EYELASH EXTENSION</div>
+              </th>
+              <th className="first-sub-service-heading">Full-set</th>
+              <th className="second-sub-service-heading">Re-fill</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {eyelashPrices.map((eyelashService) => (
+              <tr key={eyelashService.service}>
+                <td>{eyelashService.service}</td>
+                <td>${eyelashService.price.Fullset}</td>
+                <td>
+                  {eyelashService.price.Refill
+                    ? `$${eyelashService.price.Refill[0]} - $${eyelashService.price.Refill[1]}`
+                    : ""}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <table className="wax-pricing">
+      <div className="service-container">
         <div className="embedded-logo">
           <img src={smallLogo} width={250} height={250} alt="small logo" />
         </div>
-        <thead>
-          <tr>
-            <th>
-              <div className="service-heading">WAXING</div>
-            </th>
-            <th className="first-sub-service-heading"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {waxingPrices.map((wax) => (
-            <tr key={wax.service}>
-              <td>{wax.service}</td>
-              <td>
-                ${wax.price[0]} {wax.price[1] && `- $${wax.price[1]}`}
-              </td>
+        <table className="wax-pricing">
+          <thead>
+            <tr>
+              <th>
+                <div className="service-heading">WAXING</div>
+              </th>
+              <th className="first-sub-service-heading"></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {waxingPrices.map((wax) => (
+              <tr key={wax.service}>
+                <td>{wax.service}</td>
+                <td>
+                  ${wax.price[0]} {wax.price[1] && `- $${wax.price[1]}`}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <table className="lifting-pricing">
+      <div className="service-container">
         <div className="embedded-logo">
           <img src={smallLogo} width={120} height={120} alt="small logo" />
         </div>
-        <thead>
-          <tr>
-            <th>
-              <div className="service-heading">LIFTING / TINTING</div>
-            </th>
-            <th className="first-sub-service-heading"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {liftingPrices.map((lift) => (
-            <tr key={lift.service}>
-              <td>{lift.service}</td>
-              <td>${lift.price}</td>
+        <table className="lifting-pricing">
+          <thead>
+            <tr>
+              <th>
+                <div className="service-heading">LIFTING / TINTING</div>
+              </th>
+              <th className="first-sub-service-heading"></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {liftingPrices.map((lift) => (
+              <tr key={lift.service}>
+                <td>{lift.service}</td>
+                <td>${lift.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <Footer />
     </motion.div>
