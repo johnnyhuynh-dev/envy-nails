@@ -6,8 +6,8 @@
   opacity: 0;
 }
 
-.pricing .service-title {
-  align-self: flex-start;
+.service-title.pricing-title {
+  margin-bottom: 10px;
 }
 
 .service-container {

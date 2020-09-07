@@ -13,31 +13,11 @@
   object-fit: contain;
 }
 
-.address {
-  font-size: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 5px;
-  color: inherit;
-}
-
-.phone-number {
-  font-weight: 500;
-  font-size: inherit;
-  color: inherit;
-}
-
-.phone-number > * {
-  margin: 10px;
-}
-
 .social-icons {
   margin: 10px;
-  color: inherit;
 }
 
-.fa-mobile-alt {
-  margin-right: 0;
+.social-media img {
+  width: 35px;
+  height: 35px;
 }

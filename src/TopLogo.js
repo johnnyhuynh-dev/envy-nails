@@ -1,7 +1,8 @@
 import React from "react";
-import largeLogo from "./assets/envy-logo3.jpg";
+import largeLogo from "./assets/large-logo.jpg";
 import "./TopLogo.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function TopLogo() {
   return (
@@ -11,7 +12,9 @@ export default function TopLogo() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <img src={largeLogo} alt="top-logo" />
+      <Link to="/">
+        <img src={largeLogo} alt="top-logo" />
+      </Link>
     </motion.div>
   );
 }

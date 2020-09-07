@@ -1,15 +1,34 @@
 import React from "react";
 import "./Pricing.css";
 import price from "./price.json";
-import Footer from "./Footer";
 import { motion } from "framer-motion";
-import smallLogo from "./assets/envy-logo.jpg";
+import smallLogo from "./assets/small-logo.jpg";
+import useFetchDocuments from "./useFetchDocuments";
 
 export default function Pricing() {
   const nailsPrices = price.nails;
   const eyelashPrices = price.eyelash;
   const waxingPrices = price.waxing;
   const liftingPrices = price.lifting;
+  const { docs: images } = useFetchDocuments("eyelash");
+
+  const animationVariant = {
+    initial: {
+      x: -1000,
+      opacity: 0,
+    },
+    animate: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        opacity: {
+          duration: 1,
+        },
+        delay: custom,
+        type: "tween",
+      },
+    }),
+  };
 
   return (
     <motion.div
@@ -18,7 +37,16 @@ export default function Pricing() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ damping: 10, duration: 1 }}
     >
-      <h2 className="service-title">PRICING</h2>
+      <motion.div
+        className="separator-image"
+        variants={animationVariant}
+        initial="initial"
+        animate="animate"
+        delay={0.8}
+      >
+        {images && <img src={images[1].url} height={200} alt="separator"></img>}
+      </motion.div>
+      <h2 className="service-title pricing-title">PRICING</h2>
       <div className="service-container">
         <div className="embedded-logo">
           <img src={smallLogo} width={250} height={250} alt="small logo" />
@@ -129,8 +157,6 @@ export default function Pricing() {
           </tbody>
         </table>
       </div>
-
-      <Footer />
     </motion.div>
   );
 }

@@ -3,12 +3,12 @@
 } */
 
 .outer-bar {
-  height: 2px;
+  height: 3px;
   width: 100%;
   border: none;
 }
 
 .inner-bar {
-  height: 5px;
+  height: 2px;
   background-color: black;
 }

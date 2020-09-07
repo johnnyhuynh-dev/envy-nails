@@ -20,16 +20,18 @@ body {
 
 i {
   font-size: 1.5rem;
+  color: black;
 }
 
 a,
 a:visited {
   text-decoration: none;
+  color: white;
 }
 
-.slider-container {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+a.active,
+a:visited.active {
+  text-decoration: underline;
+  color: yellowgreen;
+  transition: all 1s ease;
 }

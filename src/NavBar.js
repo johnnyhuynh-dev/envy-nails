@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const [isToggled, setIsToggled] = useState(false);
@@ -19,43 +20,45 @@ export default function NavBar() {
   const navBarVariant = {
     hidden: {
       scale: 0.5,
-      x: -1000,
-      y: -1000,
-      opacity: 0.1,
+      opacity: 0,
+      x: "-100vw",
+      y: "-100vw",
     },
     visible: {
       scale: 1,
+      opacity: 1,
       x: 0,
       y: 0,
-      opacity: 1,
-    },
-    transition: {
-      type: "tween",
+      transition: {
+        type: "tween",
+      },
     },
     exit: {
       scale: 0.5,
-      x: -1000,
-      y: -1000,
+      opacity: 0,
+      x: "-100vw",
+      y: "-100vw",
+      transition: {
+        duration: 0.3,
+      },
     },
   };
   // Navbar items
   const navItemVariant = {
-    hidden: {
-      x: -1000,
-      scale: 0.5,
-    },
-
-    visible: {
-      x: 0,
-      scale: 1,
-    },
     hover: {
       opacity: 0.8,
       x: 10,
     },
-    exit: {
-      x: -1000,
-      scale: 0.1,
+    hidden: {
+      opacity: 0.6,
+    },
+    visible: {
+      x: [0, 3, -3, 0],
+      y: [0, 3, -3, 0],
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
     },
   };
 
@@ -97,9 +100,7 @@ export default function NavBar() {
 
         <motion.div
           className="third-stripe"
-          style={
-            isToggled ? { visibility: "hidden" } : { visibility: "visible" }
-          }
+          animate={isToggled ? { opacity: 0 } : { opacity: 1 }}
         ></motion.div>
       </motion.div>
 
@@ -111,26 +112,51 @@ export default function NavBar() {
               variants={navBarVariant}
               initial="hidden"
               animate="visible"
-              transition="transition"
               exit="exit"
             >
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Home
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink exact to="/">
+                  Home
+                </NavLink>
               </motion.div>
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Nails
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink to="/nails">Nails</NavLink>
               </motion.div>
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Eyelash Extension
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink to="/eyelash">Eyelash Extension</NavLink>
               </motion.div>
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Waxing
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink to="waxing">Waxing</NavLink>
               </motion.div>
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Pricing
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink to="pricing">Pricing</NavLink>
               </motion.div>
-              <motion.div variants={navItemVariant} whileHover="hover">
-                Contact
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
+                <NavLink to="/contact">Contact</NavLink>
               </motion.div>
             </motion.div>
           </div>

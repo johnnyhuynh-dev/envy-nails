@@ -1,7 +1,6 @@
 import React from "react";
 import ImageDemo from "./ImageDemo";
 import Loader from "./Loader";
-import Footer from "./Footer";
 import price from "./price.json";
 import "./ServicePage.css";
 import { motion } from "framer-motion";
@@ -60,7 +59,6 @@ export default function ServicePage({ images, loading, serviceName }) {
           ))
         )}
       </div>
-      {!loading && <Footer />}
     </div>
   );
 }

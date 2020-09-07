@@ -34,7 +34,7 @@ export default function Slider({ images, showTime }) {
     } else {
       setTimeout(() => {
         setProgressLoading(true);
-      }, 500);
+      }, 1000);
       moveToNextImage();
     }
   }, [progressLoading]);
@@ -48,6 +48,15 @@ export default function Slider({ images, showTime }) {
     center: {
       opacity: 1,
       x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+        duration: 0.5,
+        ease: "easeIn",
+        opacity: {
+          duration: 1,
+        },
+      },
     },
     exit: (direction) => ({
       opacity: 1,
@@ -83,17 +92,6 @@ export default function Slider({ images, showTime }) {
               animate="center"
               exit="exit"
               custom={direction}
-              transition={{
-                x: {
-                  type: "spring",
-                  stiffness: 40,
-                  duration: 0.5,
-                  ease: "easeIn",
-                },
-                opacity: {
-                  duration: 0.5,
-                },
-              }}
             />
           )}
         </AnimatePresence>

@@ -1,0 +1,74 @@
+.contact {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address {
+  font-size: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  color: inherit;
+}
+
+.phone-number {
+  margin: 20px;
+  padding: 5px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: inherit;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.phone-number > * {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.fa-mobile-alt {
+  margin-right: 0;
+  font-size: 1.3rem;
+}
+
+.trading-hours,
+.map-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.trading-hours h4 {
+  margin: 10px;
+}
+.trading-hours-table {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.trading-hours-table > * {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.map-container h4 {
+  margin: 10px;
+}
+
+.google-map {
+  width: 90%;
+  border: none;
+  border-radius: 20px;
+}

@@ -1,7 +1,10 @@
 import React from "react";
 import "./Footer.css";
-import logo from "./assets/envy-logo3.jpg";
+import logo from "./assets/large-logo.jpg";
 import { motion } from "framer-motion";
+import fbLogo from "./assets/facebook-icon-48.png";
+import instaLogo from "./assets/icons8-instagram-64.png";
+import follow from "./assets/follow.png";
 
 export default function Footer() {
   return (
@@ -9,35 +12,38 @@ export default function Footer() {
       <div className="logo">
         <img src={logo} height={100} alt="envy logo" />
       </div>
-      <div className="address">
-        <div>Shop 3, 113 - 115 Main Road</div>
-        <div>Moonah, TAS 7009</div>
-      </div>
-      <a className="phone-number" href="tel:0432-235-635">
-        <motion.i
-          animate={{ scale: [1.1, 0.9, 1] }}
-          transition={{ duration: 0.5, yoyo: 2 }}
-          className="fas fa-mobile-alt"
-        ></motion.i>
-        <span>0432 235 635</span>
-      </a>
+      <img src={follow} alt="follow us icon" />
       <div className="social-media">
         <a
           href="https://www.facebook.com/envylashesHobart"
           className="social-icons"
         >
-          <motion.i
+          <motion.img
+            src={fbLogo}
             animate={{ scale: [1.1, 0.9, 1] }}
-            transition={{ duration: 0.5, yoyo: 2 }}
-            className="fab fa-facebook-f"
-          ></motion.i>
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 2,
+              ease: "circInOut",
+            }}
+          />
         </a>
-        <a href="https://www.instagram.com" className="social-icons">
-          <motion.i
-            animate={{ scale: [1.1, 0.9, 1] }}
-            transition={{ duration: 0.5, yoyo: 2 }}
-            className="fab fa-instagram"
-          ></motion.i>
+
+        <a
+          href="https://www.instagram.com/envynailslashes_hobart/"
+          className="social-icons"
+        >
+          <motion.img
+            src={instaLogo}
+            animate={{ scale: [1, 1.1, 0.9, 1] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatDelay: 2,
+              ease: "circOut",
+            }}
+          />
         </a>
       </div>
     </section>
