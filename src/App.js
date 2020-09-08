@@ -10,7 +10,6 @@ import Contact from "./Contact";
 import Waxing from "./Waxing";
 import Nails from "./Nails";
 import { Switch, Route, useLocation } from "react-router-dom";
-import Carousel from "./Carousel";
 
 function App() {
   const location = useLocation();
@@ -22,11 +21,9 @@ function App() {
 
   return (
     <div>
-      <Carousel showTime={5} />
-      {/* <NavBar />
-      {!isHomePage && <TopLogo />} */}
-
-      {/* <Switch>
+      <NavBar />
+      {!isHomePage && <TopLogo />}
+      <Switch>
         <Route exact path="/">
           <HomePage />
         </Route>
@@ -45,9 +42,8 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-      </Switch> */}
-
-      {/* <Footer /> */}
+      </Switch>
+      {!isHomePage && <Footer />}
       {/* <UploadForm /> */}
     </div>
   );

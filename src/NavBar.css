@@ -1,6 +1,7 @@
 /* The Whole Navigation Bar */
 .navbar {
   z-index: 99;
+  position: fixed;
 }
 /* The Hamburger icon */
 .nav-icon {

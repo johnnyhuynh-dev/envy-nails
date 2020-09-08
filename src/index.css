@@ -2,7 +2,9 @@
   box-sizing: border-box;
   --main-color: rgba(72, 183, 141, 0.65);
   --text-color: #1d1d35;
-  /* font-size: 62.5%; */
+  font-family: "Open Sans", "Roboto Mono", monospace;
+  font-weight: 600;
+  font-size: 95%;
 }
 
 body {
@@ -16,6 +18,10 @@ body {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed; */
+}
+
+small {
+  font-size: 0.75rem;
 }
 
 i {

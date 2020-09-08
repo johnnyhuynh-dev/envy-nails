@@ -1,6 +1,9 @@
-.slider-container {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home-container .footer {
+  height: 32%;
+  margin: 10px 0px;
 }

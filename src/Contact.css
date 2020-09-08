@@ -5,14 +5,22 @@
   align-items: center;
 }
 
+.contact h3 {
+  font-size: 1.3rem;
+}
+
 .address {
-  font-size: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: inherit;
   margin-top: -10px;
+}
+
+.address i {
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .booking a {
@@ -61,7 +69,7 @@
   margin: 10px;
 }
 .trading-hours-table {
-  width: 70%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -71,7 +79,9 @@
   border: solid 2px var(--main-color);
   padding: 5px;
   border-radius: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--text-color);
 }
 

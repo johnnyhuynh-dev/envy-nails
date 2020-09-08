@@ -49,8 +49,10 @@ export default function Contact() {
       <h3>Envy Nails and Lashes Hobart</h3>
 
       <div className="address">
-        <div>Shop 3, 113 - 115 Main Road</div>
-        <div>Moonah, TAS 7009</div>
+        <i>
+          <div>Shop 3, 113 - 115 Main Road</div>
+          <div>Moonah, TAS 7009</div>
+        </i>
       </div>
 
       <div className="booking">

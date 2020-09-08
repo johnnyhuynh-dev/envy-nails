@@ -1,14 +1,17 @@
-import React from "react";
-import useFetchDocuments from "./useFetchDocuments";
+import React, { useState } from "react";
+import Carousel from "./Carousel";
+import Footer from "./Footer";
 import Loader from "./Loader";
-import Slider from "./Slider";
 import "./HomePage.css";
 
 export default function HomePage() {
-  const { docs: images, loading } = useFetchDocuments("eyelash");
+  const [loading, setLoading] = useState(true);
+
   return (
-    <div className="slider-container">
-      {loading ? <Loader /> : <Slider images={images} showTime={3} />}
+    <div className="home-container">
+      {loading && <Loader />}
+      <Carousel showTime={2} loading={loading} setLoading={setLoading} />
+      <Footer />
     </div>
   );
 }

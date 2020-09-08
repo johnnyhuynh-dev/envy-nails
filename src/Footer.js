@@ -8,7 +8,12 @@ import follow from "./assets/follow.png";
 
 export default function Footer() {
   return (
-    <section className="footer">
+    <motion.section
+      className="footer"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <div className="logo">
         <img src={logo} height={100} alt="envy logo" />
       </div>
@@ -46,6 +51,6 @@ export default function Footer() {
           />
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }

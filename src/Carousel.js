@@ -5,23 +5,27 @@ import photo3 from "./assets/slideshow/3.jpg";
 import photo4 from "./assets/slideshow/4.jpg";
 import photo5 from "./assets/slideshow/5.jpg";
 import photo6 from "./assets/slideshow/6.jpg";
+import photo7 from "./assets/slideshow/7.jpg";
+
 import { motion } from "framer-motion";
 import "./Carousel.css";
 
-export default function Carousel({ showTime }) {
+export default function Carousel({ showTime, loading, setLoading }) {
   const images = [
-    "photo6",
+    "photo7",
     "photo1",
     "photo2",
     "photo3",
     "photo4",
     "photo5",
     "photo6",
+    "photo7",
     "photo1",
   ];
   const [index, setIndex] = useState(1);
   const [slidingEffect, setSlidingEffect] = useState(true);
   const [containerWidth, setContainerWidth] = useState(null);
+  const [startWidth, setStartWidth] = useState(0);
   const carouselRef = useRef(null);
 
   // auto reset the position when reach the last photo (the pseudo first photo) or the first photo (the pseudo last photo)
@@ -44,20 +48,6 @@ export default function Carousel({ showTime }) {
     setIndex((index) => index - 1);
   }
 
-  // calculate the width of the carousel container
-  useEffect(() => {
-    const width = getComputedStyle(carouselRef.current).getPropertyValue(
-      "width"
-    );
-    setContainerWidth(+width.replace("px", ""));
-  }, [containerWidth]);
-
-  // set interval for auto sliding
-  useEffect(() => {
-    const carouselInterval = setInterval(() => nextPhoto(), showTime * 1000);
-    return () => clearInterval(carouselInterval);
-  });
-
   // after the animation of first/last photo finishes, jump to its pseudo photo but with no effect
   function resetPosition() {
     if (lastPhoto || firstPhoto) {
@@ -68,21 +58,42 @@ export default function Carousel({ showTime }) {
     }
   }
 
+  // calculate the width of the carousel container, update progress bar and check for when to move to next image
+  useEffect(() => {
+    const width = getComputedStyle(carouselRef.current).getPropertyValue(
+      "width"
+    );
+    setContainerWidth(+width.replace("px", ""));
+
+    // for progress bar
+    const pixelAmountPerFiveMs = containerWidth / (showTime * 200);
+
+    // don't start update the progress if image is still being loaded
+    if (loading) return;
+    const widthInterval = setInterval(() => {
+      setStartWidth((startWidth) => startWidth + pixelAmountPerFiveMs);
+    }, 5);
+
+    // check for when to move to the next image
+    if (startWidth > containerWidth) {
+      nextPhoto();
+      setStartWidth(0);
+    }
+    return () => clearInterval(widthInterval);
+  }, [containerWidth, startWidth, loading]);
+
   return (
-    <motion.div
+    <div
       className="carousel-container"
       ref={carouselRef}
-      initial={{ x: "100vw", opacity: 0 }}
-      animate={{
-        x: 0,
-        opacity: 1,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: 1,
-        type: "tween",
-      }}
+      style={loading ? { opacity: 0 } : { opacity: 1 }}
     >
+      <div className="progress-bar">
+        <div className="outer-bar">
+          <div className="inner-bar" style={{ width: startWidth }}></div>
+        </div>
+      </div>
+
       <motion.div
         className="carousel-slider"
         animate={{
@@ -96,19 +107,31 @@ export default function Carousel({ showTime }) {
         onAnimationComplete={resetPosition}
       >
         <img
-          src={photo6}
+          src={photo7}
           width={containerWidth}
           alt="slideshow"
-          onLoad={() => console.log("loaded")}
+          style={loading ? { opacity: 0 } : { opacity: 1 }}
         />
-        <img src={photo1} width={containerWidth} alt="slideshow" />
+        <motion.img
+          src={photo1}
+          width={containerWidth}
+          alt="slideshow"
+          onLoad={() => {
+            setLoading(false);
+          }}
+          style={loading ? { opacity: 0 } : { opacity: 1 }}
+          transition={{
+            delay: 0.5,
+          }}
+        />
         <img src={photo2} width={containerWidth} alt="slideshow" />
         <img src={photo3} width={containerWidth} alt="slideshow" />
         <img src={photo4} width={containerWidth} alt="slideshow" />
         <img src={photo5} width={containerWidth} alt="slideshow" />
         <img src={photo6} width={containerWidth} alt="slideshow" />
+        <img src={photo7} width={containerWidth} alt="slideshow" />
         <img src={photo1} width={containerWidth} alt="slideshow" />
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

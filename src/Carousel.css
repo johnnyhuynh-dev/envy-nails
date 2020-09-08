@@ -1,13 +1,27 @@
 .carousel-container {
   display: flex;
-  height: 60vh;
+  flex-direction: column;
   overflow: hidden;
+  height: 68%;
 }
 
 .carousel-slider {
   display: flex;
+  height: 100%;
 }
 
 .carousel-slider img {
   object-fit: cover;
+  height: 100%;
+}
+
+.outer-bar {
+  height: 3px;
+  width: 100%;
+  border: none;
+}
+
+.inner-bar {
+  height: 3px;
+  background-color: black;
 }
