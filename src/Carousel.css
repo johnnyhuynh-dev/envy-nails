@@ -1,0 +1,13 @@
+.carousel-container {
+  display: flex;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.carousel-slider {
+  display: flex;
+}
+
+.carousel-slider img {
+  object-fit: cover;
+}

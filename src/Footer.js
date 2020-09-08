@@ -20,7 +20,7 @@ export default function Footer() {
         >
           <motion.img
             src={fbLogo}
-            animate={{ scale: [1.1, 0.9, 1] }}
+            animate={{ scale: [1, 1.1, 0.9, 1] }}
             transition={{
               duration: 2,
               repeat: Infinity,

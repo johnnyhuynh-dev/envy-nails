@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Contact.css";
+import bookNow from "./assets/booking.png";
 import useFetchDocuments from "./useFetchDocuments";
 
 export default function Contact() {
@@ -52,19 +53,24 @@ export default function Contact() {
         <div>Moonah, TAS 7009</div>
       </div>
 
-      <a className="phone-number" href="tel:0432-235-635">
-        <motion.i
-          animate={{ y: [1.5, -1.5, 1, -1, 0], x: [-1.5, 1.5, 1, -1, 0] }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            repeatDelay: 1,
-            ease: "easeInOut",
-          }}
-          className="fas fa-mobile-alt"
-        ></motion.i>
-        <span>0432 235 635</span>
-      </a>
+      <div className="booking">
+        <a href="tel: 0432-235-635">
+          <img src={bookNow} alt="click to book now" />
+          <div className="phone-number">
+            <motion.i
+              animate={{ y: [1.5, -1.5, 1, -1, 0], x: [-1.5, 1.5, 1, -1, 0] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                repeatDelay: 1,
+                ease: "easeInOut",
+              }}
+              className="fas fa-mobile-alt"
+            ></motion.i>
+            <span>0432 235 635</span>
+          </div>
+        </a>
+      </div>
 
       <div className="trading-hours">
         <h4>Trading Hours</h4>

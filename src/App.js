@@ -5,25 +5,28 @@ import UploadForm from "./firebase/UploadForm";
 import TopLogo from "./TopLogo";
 import EyelashExtension from "./EyelashExtension";
 import Pricing from "./Pricing";
-import { Switch, Route, useLocation } from "react-router-dom";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Waxing from "./Waxing";
 import Nails from "./Nails";
+import { Switch, Route, useLocation } from "react-router-dom";
+import Carousel from "./Carousel";
 
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
     <div>
-      <NavBar />
-      {!isHomePage && <TopLogo />}
+      <Carousel showTime={5} />
+      {/* <NavBar />
+      {!isHomePage && <TopLogo />} */}
 
-      <Switch>
+      {/* <Switch>
         <Route exact path="/">
           <HomePage />
         </Route>
@@ -33,8 +36,8 @@ function App() {
         <Route path="/eyelash">
           <EyelashExtension />
         </Route>
-        <Route>
-          <Waxing path="/waxing" />
+        <Route path="/waxing">
+          <Waxing />
         </Route>
         <Route path="/pricing">
           <Pricing />
@@ -42,9 +45,9 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-      </Switch>
+      </Switch> */}
 
-      {<Footer />}
+      {/* <Footer /> */}
       {/* <UploadForm /> */}
     </div>
   );
