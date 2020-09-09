@@ -4,6 +4,7 @@ import price from "./price.json";
 import { motion } from "framer-motion";
 import smallLogo from "./assets/small-logo.jpg";
 import useFetchDocuments from "./useFetchDocuments";
+import animationVariant from "./animationVariant";
 
 export default function Pricing() {
   const nailsPrices = price.nails;
@@ -11,24 +12,6 @@ export default function Pricing() {
   const waxingPrices = price.waxing;
   const liftingPrices = price.lifting;
   const { docs: images } = useFetchDocuments("eyelash");
-
-  const animationVariant = {
-    initial: {
-      x: -1000,
-      opacity: 0,
-    },
-    animate: (custom) => ({
-      x: 0,
-      opacity: 1,
-      transition: {
-        opacity: {
-          duration: 1,
-        },
-        delay: custom,
-        type: "tween",
-      },
-    }),
-  };
 
   return (
     <motion.div

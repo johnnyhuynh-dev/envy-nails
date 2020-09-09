@@ -1,0 +1,38 @@
+.outer-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.inner-modal {
+  position: relative;
+}
+
+.img-full-size {
+  object-fit: contain;
+  width: 100%;
+}
+
+.left-arrow-button,
+.right-arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.left-arrow-button {
+  left: 0;
+  margin-left: 5px;
+}
+
+.right-arrow-button {
+  right: 0;
+  margin-right: 5px;
+}

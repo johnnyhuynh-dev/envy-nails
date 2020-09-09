@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import "./Contact.css";
 import bookNow from "./assets/booking.png";
 import useFetchDocuments from "./useFetchDocuments";
+import animationVariant from "./animationVariant";
 
 export default function Contact() {
   const { REACT_APP_GOOGLE_API } = process.env;
@@ -10,25 +11,6 @@ export default function Contact() {
   &q=place_id:ChIJZ7qDIup0bqoRJucXbOIFxDU&language=en`;
 
   const { docs: images } = useFetchDocuments("eyelash");
-
-  const animationVariant = {
-    initial: {
-      x: -1000,
-      opacity: 0,
-    },
-    animate: (custom) => ({
-      x: 0,
-      opacity: 1,
-      transition: {
-        opacity: {
-          duration: 1,
-        },
-        delay: custom,
-        type: "tween",
-      },
-    }),
-  };
-
   return (
     <motion.div
       className="contact"
