@@ -2,7 +2,7 @@ import React from "react";
 import "./ImageDemo.css";
 import { motion } from "framer-motion";
 
-export default function ImageDemo({ src, price, serviceName }) {
+export default function ImageDemo({ price, serviceName, children }) {
   const servicePhotoVariant = {
     initial: {
       x: -1000,
@@ -34,7 +34,7 @@ export default function ImageDemo({ src, price, serviceName }) {
         <div className="service-name">{serviceName}</div>
         <div className="price">$ {price}</div>
       </div>
-      <img src={src} alt="service demo" height={200} />
+      {children}
     </motion.div>
   );
 }

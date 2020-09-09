@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Contact.css";
-import bookNow from "./assets/booking.png";
 import useFetchDocuments from "./useFetchDocuments";
 import animationVariant from "./animationVariant";
+import bookNow from "./assets/booking.png";
+import smartphone from "./assets/smartphone.png";
 
 export default function Contact() {
   const { REACT_APP_GOOGLE_API } = process.env;
@@ -41,7 +42,8 @@ export default function Contact() {
         <a href="tel: 0432-235-635">
           <img src={bookNow} alt="click to book now" />
           <div className="phone-number">
-            <motion.i
+            <motion.img
+              src={smartphone}
               animate={{ y: [1.5, -1.5, 1, -1, 0], x: [-1.5, 1.5, 1, -1, 0] }}
               transition={{
                 duration: 1,
@@ -49,8 +51,7 @@ export default function Contact() {
                 repeatDelay: 1,
                 ease: "easeInOut",
               }}
-              className="fas fa-mobile-alt"
-            ></motion.i>
+            ></motion.img>
             <span>0432 235 635</span>
           </div>
         </a>
