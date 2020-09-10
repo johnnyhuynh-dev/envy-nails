@@ -24,10 +24,9 @@ export default function ServicePage({ images, loading, serviceName }) {
     }
   }
 
-  function clickCloseButton(e) {
+  function clickCloseButton() {
     setCurrent({ ...current, isToggled: false });
   }
-
   function nextPhoto() {
     setCurrent((prevState) => {
       if (prevState.currentIndex === images.length - 1) {
@@ -47,10 +46,6 @@ export default function ServicePage({ images, loading, serviceName }) {
       }
     });
   }
-
-  useEffect(() => {
-    console.log(current);
-  }, [current]);
 
   return (
     <div className="service-page">

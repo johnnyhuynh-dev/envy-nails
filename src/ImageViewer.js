@@ -1,6 +1,6 @@
 import React from "react";
 import "./ImageViewer.css";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import rightArrow from "./assets/next-arrow-icon.png";
 import leftArrow from "./assets/previous-arrow-icon.png";
 import closeButton from "./assets/close-button.png";
@@ -11,11 +11,11 @@ export default function ImageViewer({
   clickCloseButton,
   clickNext,
   clickPrev,
+  withArrow,
 }) {
   return (
     <div className="outer-modal" onClick={clickOutside}>
       <div className="inner-modal">
-        clickOutside
         <img
           className="close-button"
           src={closeButton}
