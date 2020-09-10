@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ServicePage from "./ServicePage";
 import useFetchDocument from "./useFetchDocuments";
-import Modal from "./Modal";
-import ImageViewer from "./ImageViewer";
 
 export default function Waxing() {
   const { docs: images, loading } = useFetchDocument("eyelash");
