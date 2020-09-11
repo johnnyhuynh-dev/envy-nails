@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ImageDemo from "./ImageDemo";
 import Loader from "./Loader";
 import price from "./price.json";
