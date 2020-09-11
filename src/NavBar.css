@@ -6,7 +6,9 @@
 /* The Hamburger icon */
 .nav-icon {
   padding: 10px;
-  padding-right: 0px;
+  padding-right: 5px;
+  padding-left: 15px;
+  padding-bottom: 15px;
   z-index: 99;
   position: fixed;
   right: 10px;

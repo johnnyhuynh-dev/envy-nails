@@ -15,12 +15,12 @@ export default function Footer() {
       transition={{ duration: 2 }}
     >
       <div className="logo">
-        <img src={logo} height={100} alt="envy logo" />
+        <img src={logo} height={140} alt="envy logo" />
       </div>
-      <img src={follow} alt="follow us icon" />
+      <img src={follow} height={35} alt="follow us icon" />
       <div className="social-media">
         <a
-          href="https://www.facebook.com/envylashesHobart"
+          href="https://www.facebook.com/Envynailsandlasheshobart/"
           className="social-icons"
         >
           <motion.img
