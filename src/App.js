@@ -5,7 +5,6 @@ import NavBar from "./NavBar";
 import TopLogo from "./TopLogo";
 import UploadForm from "./firebase/UploadForm";
 import Loader from "./Loader";
-
 const HomePage = React.lazy(() => import("./HomePage"));
 const Nails = React.lazy(() => import("./Nails"));
 const EyelashExtension = React.lazy(() => import("./EyelashExtension"));

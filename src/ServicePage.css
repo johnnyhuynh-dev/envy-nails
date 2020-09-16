@@ -38,6 +38,10 @@
   font-weight: inherit;
 }
 
+.service-name {
+  margin-bottom: 8px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 .photos-container {
   display: flex;
   flex-direction: column;

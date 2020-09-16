@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import formatFileName from "../utils/formatFileName";
 import { projectStorage, projectFirestore, timestamp } from "./config";
 
 const useStorage = (file, folder) => {
@@ -20,9 +21,10 @@ const useStorage = (file, folder) => {
         console.log(err);
       },
       async () => {
+        console.log(formatFileName(file.name));
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
-        const fileName = file.name;
+        const fileName = formatFileName(file.name);
         collectionRef.add({ url, createdAt, fileName });
         setUrl(url);
       }
