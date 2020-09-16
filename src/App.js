@@ -3,7 +3,6 @@ import { Switch, Route, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import TopLogo from "./TopLogo";
-import UploadForm from "./firebase/UploadForm";
 import Loader from "./Loader";
 const HomePage = React.lazy(() => import("./HomePage"));
 const Nails = React.lazy(() => import("./Nails"));
@@ -47,7 +46,6 @@ function App() {
         </Switch>
       </Suspense>
       {!isHomePage && <Footer />}
-      {/* <UploadForm /> */}
     </div>
   );
 }
