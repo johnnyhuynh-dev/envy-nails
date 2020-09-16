@@ -91,21 +91,21 @@ export default function ServicePage({
                   }}
                 />
               </ImageDemo>
-
-              {current.isToggled && (
-                <Modal>
-                  <ImageViewer
-                    url={images[current.currentIndex].url}
-                    clickOutside={clickOutside}
-                    clickCloseButton={clickCloseButton}
-                    clickNext={nextPhoto}
-                    clickPrev={prevPhoto}
-                    key={images[current.currentIndex].id}
-                  />
-                </Modal>
-              )}
             </div>
           ))
+        )}
+
+        {current.isToggled && (
+          <Modal>
+            <ImageViewer
+              url={images[current.currentIndex].url}
+              clickOutside={clickOutside}
+              clickCloseButton={clickCloseButton}
+              clickNext={nextPhoto}
+              clickPrev={prevPhoto}
+              key={images[current.currentIndex].id}
+            />
+          </Modal>
         )}
       </div>
     </div>

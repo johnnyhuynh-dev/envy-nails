@@ -15,9 +15,9 @@ export default function Footer() {
       transition={{ duration: 2 }}
     >
       <div className="logo">
-        <img src={logo} height={140} alt="envy logo" />
+        <img src={logo} height={125} alt="envy logo" />
       </div>
-      <img src={follow} height={35} alt="follow us icon" />
+
       <div className="social-media">
         <a
           href="https://www.facebook.com/Envynailsandlasheshobart/"
@@ -34,6 +34,8 @@ export default function Footer() {
             }}
           />
         </a>
+
+        <img src={follow} height={35} alt="follow us icon" />
 
         <a
           href="https://www.instagram.com/envynailslashes_hobart/"

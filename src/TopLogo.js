@@ -1,5 +1,5 @@
 import React from "react";
-import largeLogo from "./assets/large-logo.jpg";
+import smallLogo from "./assets/small-logo.jpg";
 import "./TopLogo.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ export default function TopLogo() {
       transition={{ duration: 1 }}
     >
       <Link to="/">
-        <img src={largeLogo} alt="top-logo" />
+        <img src={smallLogo} alt="top-logo" />
       </Link>
     </motion.div>
   );

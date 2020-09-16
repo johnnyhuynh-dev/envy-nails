@@ -34,7 +34,7 @@ export default function ImageViewer({
           src={url}
           alt="full size on top of the modal"
           height="300"
-          initial={{ opacity: 0, scale: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
         />
         <img

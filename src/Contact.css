@@ -25,26 +25,26 @@
 
 .booking a {
   margin: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: grid;
   place-items: center;
 }
 
 .phone-number {
-  margin: 20px;
-  padding: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  padding: 7px;
   background-color: var(--main-color);
-  border-radius: 5px;
+  border-radius: 8px;
   font-weight: 500;
   font-size: 1.3rem;
   color: var(--text-color);
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
 }
 
-.phone-number > small {
-  display: block;
-  margin: 0;
-  text-align: center;
+.phone-number > span {
+  margin: 5px;
 }
 
 .phone-number > * {
@@ -71,8 +71,11 @@
   margin: 10px 0;
 }
 
-.trading-hours h4 {
+.trading-hours h4,
+.map-container h4 {
   margin: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 .trading-hours-table {
   width: 80%;
@@ -89,10 +92,6 @@
   justify-content: center;
   align-items: center;
   color: var(--text-color);
-}
-
-.map-container h4 {
-  margin: 10px;
 }
 
 .google-map {

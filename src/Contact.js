@@ -62,19 +62,19 @@ export default function Contact() {
         <h4>Trading Hours</h4>
         <div className="trading-hours-table">
           <div>Monday</div>
-          <div>09:00 - 17:00</div>
+          <div>9am - 5:30pm</div>
           <div>Tuesday</div>
-          <div>09:00 - 17:00</div>
+          <div>9am - 5:30pm</div>
           <div>Wednesday</div>
-          <div>09:00 - 17:00</div>
+          <div>9am - 5:30pm</div>
           <div>Thursday</div>
-          <div>09:00 - 17:30</div>
+          <div>9am - 5:30pm</div>
           <div>Friday</div>
-          <div>09:00 - 17:00</div>
+          <div>9am - 5:30pm</div>
           <div>Saturday</div>
-          <div>09:00 - 17:30</div>
+          <div>9am - 5pm</div>
           <div>Sunday</div>
-          <div>09:00 - 17:00</div>
+          <div>10am - 4pm</div>
         </div>
       </div>
 
