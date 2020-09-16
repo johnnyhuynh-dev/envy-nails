@@ -48,7 +48,7 @@ function App() {
         </Switch>
       </Suspense>
       {!isHomePage && <Footer />}
-      <UploadForm />
+      {/* <UploadForm /> */}
     </div>
   );
 }

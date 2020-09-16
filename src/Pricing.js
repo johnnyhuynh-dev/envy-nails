@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import smallLogo from "./assets/small-logo.jpg";
 import useFetchDocuments from "./useFetchDocuments";
 import animationVariant from "./animationVariant";
+import shopSeparator from "./assets/shop-separator.jpg";
 
 export default function Pricing() {
   const nailsPrices = price.nails;
@@ -27,7 +28,7 @@ export default function Pricing() {
         animate="animate"
         delay={0.8}
       >
-        {images && <img src={images[1].url} height={200} alt="separator"></img>}
+        {images && <img src={shopSeparator} height={200} alt="separator"></img>}
       </motion.div>
       <h2 className="service-title pricing-title">PRICING</h2>
       <div className="service-container">

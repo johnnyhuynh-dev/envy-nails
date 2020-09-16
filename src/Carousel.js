@@ -6,13 +6,16 @@ import photo4 from "./assets/slideshow/4.jpg";
 import photo5 from "./assets/slideshow/5.jpg";
 import photo6 from "./assets/slideshow/6.jpg";
 import photo7 from "./assets/slideshow/7.jpg";
+import photo8 from "./assets/slideshow/8.jpg";
+import photo9 from "./assets/slideshow/9.jpg";
+import photo10 from "./assets/slideshow/10.jpg";
 
 import { motion } from "framer-motion";
 import "./Carousel.css";
 
 export default function Carousel({ showTime, loading, setLoading }) {
   const images = [
-    "photo7",
+    "photo10",
     "photo1",
     "photo2",
     "photo3",
@@ -20,6 +23,9 @@ export default function Carousel({ showTime, loading, setLoading }) {
     "photo5",
     "photo6",
     "photo7",
+    "photo8",
+    "photo9",
+    "photo10",
     "photo1",
   ];
   const [index, setIndex] = useState(1);
@@ -107,7 +113,7 @@ export default function Carousel({ showTime, loading, setLoading }) {
         onAnimationComplete={resetPosition}
       >
         <img
-          src={photo7}
+          src={photo10}
           width={containerWidth}
           alt="slideshow"
           style={loading ? { opacity: 0 } : { opacity: 1 }}
@@ -130,6 +136,9 @@ export default function Carousel({ showTime, loading, setLoading }) {
         <img src={photo5} width={containerWidth} alt="slideshow" />
         <img src={photo6} width={containerWidth} alt="slideshow" />
         <img src={photo7} width={containerWidth} alt="slideshow" />
+        <img src={photo8} width={containerWidth} alt="slideshow" />
+        <img src={photo9} width={containerWidth} alt="slideshow" />
+        <img src={photo10} width={containerWidth} alt="slideshow" />
         <img src={photo1} width={containerWidth} alt="slideshow" />
       </motion.div>
     </div>

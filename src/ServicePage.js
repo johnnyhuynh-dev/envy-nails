@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import ImageDemo from "./ImageDemo";
 import Loader from "./Loader";
-import price from "./price.json";
 import "./ServicePage.css";
 import { motion } from "framer-motion";
 import animationVariant from "./animationVariant";
 import Modal from "./Modal";
 import ImageViewer from "./ImageViewer";
 
-export default function ServicePage({ images, loading, serviceName }) {
+export default function ServicePage({
+  images,
+  separatorImage,
+  loading,
+  serviceName,
+}) {
   const [current, setCurrent] = useState({
     currentIndex: null,
     isToggled: false,
@@ -56,7 +60,9 @@ export default function ServicePage({ images, loading, serviceName }) {
         animate="animate"
         custom={0.8}
       >
-        {images && <img src={images[1].url} height={200} alt="separator"></img>}
+        {images && (
+          <img src={separatorImage} height={200} alt="separator"></img>
+        )}
       </motion.div>
 
       <motion.h2
@@ -75,15 +81,11 @@ export default function ServicePage({ images, loading, serviceName }) {
         ) : (
           images.map((image, index) => (
             <div key={image.id}>
-              <ImageDemo
-                key={image.id}
-                serviceName={price.nails[index].service}
-                price={price.nails[index].price.Polish}
-              >
+              <ImageDemo key={image.id} serviceName={image.fileName}>
                 <img
                   src={image.url}
                   alt="service demo"
-                  height={200}
+                  height={300}
                   onClick={() => {
                     showModal(index);
                   }}

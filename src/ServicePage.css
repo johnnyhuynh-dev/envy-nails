@@ -13,7 +13,7 @@
 .separator-image img {
   width: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 

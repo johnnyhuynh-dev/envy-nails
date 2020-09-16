@@ -5,6 +5,7 @@ import useFetchDocuments from "./useFetchDocuments";
 import animationVariant from "./animationVariant";
 import bookNow from "./assets/booking.png";
 import smartphone from "./assets/smartphone.png";
+import shopSeparator from "./assets/shop-separator.jpg";
 
 export default function Contact() {
   const { REACT_APP_GOOGLE_API } = process.env;
@@ -26,7 +27,7 @@ export default function Contact() {
         animate="animate"
         delay={0.8}
       >
-        {images && <img src={images[1].url} height={200} alt="separator"></img>}
+        {images && <img src={shopSeparator} height={200} alt="separator"></img>}
       </motion.div>
       <h2 className="service-title">CONTACT</h2>
       <h3>Envy Nails and Lashes Hobart</h3>

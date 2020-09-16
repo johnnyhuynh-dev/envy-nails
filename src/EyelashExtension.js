@@ -1,9 +1,10 @@
 import React from "react";
 import ServicePage from "./ServicePage";
 import useFetchDocument from "./useFetchDocuments";
+import eyelashSeparator from "./assets/eyelash-separator.jpg";
 
 export default function EyelashExtension() {
-  const { docs: images, loading } = useFetchDocument("eyelash");
+  const { docs: images, loading } = useFetchDocument("envy-eyelash");
 
   return (
     <div className="eyelash-extension">
@@ -11,6 +12,7 @@ export default function EyelashExtension() {
         images={images}
         loading={loading}
         serviceName={"EYELASH EXTENSION"}
+        separatorImage={eyelashSeparator}
       />
     </div>
   );
