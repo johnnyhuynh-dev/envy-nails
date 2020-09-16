@@ -149,6 +149,13 @@ export default function NavBar() {
                 whileHover="hover"
                 onClick={() => setIsToggled(false)}
               >
+                <NavLink to="/lifting">Lifting / Tinting</NavLink>
+              </motion.div>
+              <motion.div
+                variants={navItemVariant}
+                whileHover="hover"
+                onClick={() => setIsToggled(false)}
+              >
                 <NavLink to="/pricing">Pricing</NavLink>
               </motion.div>
               <motion.div

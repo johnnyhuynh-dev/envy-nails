@@ -10,6 +10,7 @@ const EyelashExtension = React.lazy(() => import("./EyelashExtension"));
 const Waxing = React.lazy(() => import("./Waxing"));
 const Pricing = React.lazy(() => import("./Pricing"));
 const Contact = React.lazy(() => import("./Contact"));
+const Lifting = React.lazy(() => import("./Lifting"));
 
 function App() {
   const location = useLocation();
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/waxing">
             <Waxing />
+          </Route>
+          <Route path="/lifting">
+            <Lifting />
           </Route>
           <Route path="/pricing">
             <Pricing />

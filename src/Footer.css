@@ -1,20 +1,26 @@
 /* Footer section */
 .footer {
+  font-family: "Rancho";
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin: 20px 0;
   color: var(--text-color);
 }
 
 .logo img {
+  margin-top: 5px;
   object-fit: contain;
 }
 
 .social-icons {
   margin: 10px;
+}
+.social-media {
+  margin-top: 10px;
 }
 
 .social-media img {

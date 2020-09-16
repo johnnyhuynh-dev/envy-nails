@@ -18,6 +18,10 @@ export default function Footer() {
         <img src={logo} height={125} alt="envy logo" />
       </div>
 
+      <div>
+        <span>3 / 113 - 115</span> Main Road, Moonah, TAS
+      </div>
+
       <div className="social-media">
         <a
           href="https://www.facebook.com/Envynailsandlasheshobart/"
