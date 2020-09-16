@@ -13,7 +13,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "typeface-open-sans": "0.0.75",
-    "typeface-roboto-mono": "0.0.75"
+    "typeface-rancho": "0.0.72"
   },
   "scripts": {
     "start": "react-scripts start",

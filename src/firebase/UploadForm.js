@@ -4,6 +4,7 @@ import Output from "./Output";
 const UploadForm = () => {
   const [files, setFiles] = useState(null);
   const [folder, setFolder] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function handleSelectPhoto(e) {
     let selected = e.target.files;
@@ -14,6 +15,11 @@ const UploadForm = () => {
 
   function handleInput(e) {
     setFolder(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setIsSubmitted(true);
   }
 
   return (
@@ -30,12 +36,14 @@ const UploadForm = () => {
       />
       <label htmlFor="folder">Folder on FireStore</label>
       <input id="folder" type="text" value={folder} onChange={handleInput} />
-      {files && folder && (
+      <button onClick={handleSubmit}>Submit</button>
+      {files && folder && isSubmitted && (
         <Output
           files={files}
           folder={folder}
           setFiles={setFiles}
           setFolder={setFolder}
+          setIsSubmitted={setIsSubmitted}
         />
       )}
     </form>

@@ -2,7 +2,6 @@
   box-sizing: border-box;
   --main-color: rgba(72, 183, 141, 0.65);
   --text-color: #1d1d35;
-  font-family: "Open Sans", "Roboto Mono", monospace;
   font-weight: 600;
   font-size: 95%;
 }
@@ -10,14 +9,7 @@
 body {
   min-height: 100vh;
   margin: 0;
-
-  /* background-color: white;
-  background-image: url("./background-photo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed; */
+  font-family: "Open Sans", "Arial", monospace;
 }
 
 small {

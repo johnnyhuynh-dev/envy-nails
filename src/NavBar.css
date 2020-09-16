@@ -2,6 +2,7 @@
 .navbar {
   z-index: 99;
   position: fixed;
+  font-family: "Rancho", cursive;
 }
 /* The Hamburger icon */
 .nav-icon {
@@ -46,9 +47,9 @@
   background-color: rgba(0, 0, 0, 0.7);
   min-height: 60vh;
   width: 100vw;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 20px;
-  padding-top: 40px;
+  padding-top: 30px;
   border-radius: 10px 10px 20px 20px;
 }
 
@@ -58,8 +59,8 @@
 } */
 
 .nav-items > * {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 

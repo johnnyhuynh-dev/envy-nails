@@ -25,7 +25,7 @@ function App() {
     <div>
       <NavBar />
       {!isHomePage && <TopLogo />}
-      <Suspense fallback={Loader}>
+      <Suspense fallback={<Loader />}>
         <Switch>
           <Route exact path="/">
             <HomePage />
@@ -48,7 +48,7 @@ function App() {
         </Switch>
       </Suspense>
       {!isHomePage && <Footer />}
-      {/* <UploadForm /> */}
+      <UploadForm />
     </div>
   );
 }
