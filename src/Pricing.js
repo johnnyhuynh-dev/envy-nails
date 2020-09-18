@@ -3,7 +3,6 @@ import "./Pricing.css";
 import price from "./price.json";
 import { motion } from "framer-motion";
 import smallLogo from "./assets/small-logo.jpg";
-import useFetchDocuments from "./useFetchDocuments";
 import animationVariant from "./animationVariant";
 import shopSeparator from "./assets/shop-separator.jpg";
 
@@ -12,7 +11,6 @@ export default function Pricing() {
   const eyelashPrices = price.eyelash;
   const waxingPrices = price.waxing;
   const liftingPrices = price.lifting;
-  const { docs: images } = useFetchDocuments("eyelash");
 
   return (
     <motion.div
@@ -28,7 +26,7 @@ export default function Pricing() {
         animate="animate"
         delay={0.8}
       >
-        {images && <img src={shopSeparator} height={200} alt="separator"></img>}
+        <img src={shopSeparator} height={200} alt="separator"></img>
       </motion.div>
       <h2 className="service-title pricing-title">PRICING</h2>
       <div className="service-container">
