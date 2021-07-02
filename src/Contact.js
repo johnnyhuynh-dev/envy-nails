@@ -10,7 +10,7 @@ import shopSeparator from "./assets/shop-separator.jpg";
 export default function Contact() {
   const { REACT_APP_GOOGLE_API } = process.env;
   const mapSrc = `https://www.google.com/maps/embed/v1/place?key=${REACT_APP_GOOGLE_API}
-  &q=place_id:ChIJZ7qDIup0bqoRJucXbOIFxDU&language=en`;
+  &q=place_id:ChIJf1wOoZt1bqoRdtOA51XMoJY&language=en`;
 
   return (
     <motion.div

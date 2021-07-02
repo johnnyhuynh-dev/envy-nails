@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import TopLogo from "./TopLogo";
 import Loader from "./Loader";
+import UploadForm from "./firebase/UploadForm";
 const HomePage = React.lazy(() => import("./HomePage"));
 const Nails = React.lazy(() => import("./Nails"));
 const EyelashExtension = React.lazy(() => import("./EyelashExtension"));
@@ -50,6 +51,7 @@ function App() {
         </Switch>
       </Suspense>
       {!isHomePage && <Footer />}
+      {/* <UploadForm /> */}
     </div>
   );
 }

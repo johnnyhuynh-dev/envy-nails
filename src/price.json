@@ -146,6 +146,6 @@
     { "service": "Eyelash Lifting", "price": 40 },
     { "service": "Eyelash Lift + Tint", "price": 55 },
     { "service": "Eyebrows Tinting", "price": 15 },
-    { "service": "Eyebrows Wax + Tint", "price": 40 }
+    { "service": "Eyebrows Wax + Tint", "price": 25 }
   ]
 }
